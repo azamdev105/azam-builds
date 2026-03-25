@@ -60,7 +60,6 @@ button {
   --gold:             #B8721A;
   --border:           rgba(15, 12, 9, 0.09);
   --border-strong:    rgba(15, 12, 9, 0.14);
-  --font-display:     'Clash Display', sans-serif;
   --font-serif:       'Lora', serif;
   --font-body:        'DM Sans', sans-serif;
   --space-1:          0.25rem;
@@ -137,6 +136,7 @@ button {
 .fade-up-d4 { transition-delay: 0.4s; }
 
 
+
 .header {
   position: fixed;
   top: 0;
@@ -152,7 +152,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 68px;
+  height: 64px;
 }
 
 .nav__logo {
@@ -207,12 +207,13 @@ button {
 }
 
 
+
 .hero {
   position: relative;
   min-height: 100svh;
   display: flex;
   flex-direction: column;
-  padding-top: 68px;
+  padding-top: 64px;
   overflow: hidden;
   background:
     radial-gradient(ellipse 65% 55% at 12% 8%,  rgba(220, 80, 40, 0.13) 0%, transparent 65%),
@@ -322,7 +323,7 @@ button {
   font-family: var(--font-serif);
   font-weight: 400;
   font-style: italic;
-  font-size: clamp(1.75rem, 3.2vw, 3rem);
+  font-size: clamp(1.375rem, 3.2vw, 3rem);
   color: var(--ink-2);
   line-height: 1.05;
   letter-spacing: -0.01em;
@@ -332,7 +333,7 @@ button {
   display: block;
   font-family: var(--font-body);
   font-weight: 600;
-  font-size: clamp(2.75rem, 6.5vw, 6.25rem);
+  font-size: clamp(2.5rem, 6.5vw, 6.25rem);
   color: var(--ink);
   line-height: 0.9;
   letter-spacing: -0.04em;
@@ -348,22 +349,11 @@ button {
   font-family: var(--font-serif);
   font-weight: 600;
   font-style: italic;
-  font-size: clamp(1.25rem, 2.4vw, 2.25rem);
+  font-size: clamp(1rem, 2.4vw, 2.25rem);
   color: var(--gold);
   line-height: 1.1;
   letter-spacing: -0.01em;
   margin-top: var(--space-2);
-}
-
-.hero__heading-tag {
-  display: block;
-  font-family: var(--font-body);
-  font-size: 0.6875rem;
-  font-weight: 600;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--coral);
-  margin-top: var(--space-6);
 }
 
 .hero__divider {
@@ -392,7 +382,7 @@ button {
 
 .hero__sub {
   font-family: var(--font-body);
-  font-size: 1.0625rem;
+  font-size: 1rem;
   font-weight: 400;
   line-height: 1.8;
   color: var(--ink);
@@ -454,6 +444,7 @@ button {
   font-weight: 400;
   color: var(--ink-2);
   letter-spacing: 0.01em;
+  text-align: center;
 }
 
 .hero__scarcity strong {
@@ -496,7 +487,7 @@ button {
   align-items: center;
   justify-content: center;
   gap: var(--space-20);
-  padding: var(--space-10) 0;
+  padding: var(--space-8) 0;
 }
 
 .hero__scroll-item {
@@ -521,7 +512,7 @@ button {
 
 .hero__scroll-label {
   font-family: var(--font-body);
-  font-size: 0.9375rem;
+  font-size: 0.8125rem;
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -531,7 +522,7 @@ button {
 
 .hero__scroll-divider {
   width: 1px;
-  height: 32px;
+  height: 28px;
   background: var(--border-strong);
   flex-shrink: 0;
 }
@@ -541,14 +532,14 @@ button {
   flex-direction: column;
   align-items: center;
   gap: 0;
-  padding-bottom: var(--space-4);
+  padding-bottom: var(--space-3);
   animation: arrowBob 2.2s ease-in-out infinite;
 }
 
 .hero__scroll-arrow-line {
   display: block;
   width: 1px;
-  height: 24px;
+  height: 20px;
   background: linear-gradient(to bottom, transparent, var(--ink-3));
 }
 
@@ -566,6 +557,7 @@ button {
   0%, 100% { transform: translateY(0); }
   50%       { transform: translateY(5px); }
 }
+
 
 
 .about {
@@ -596,10 +588,6 @@ button {
   width: 100%;
 }
 
-.about__aside {
-  display: none;
-}
-
 .about__top {
   display: flex;
   align-items: center;
@@ -608,13 +596,18 @@ button {
   margin-bottom: var(--space-12);
 }
 
-.about__top .section-label {
-  margin-bottom: 0;
+.about__label {
+  font-family: var(--font-body);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--coral);
 }
 
 .about__photo {
-  width: 120px;
-  height: 120px;
+  width: 96px;
+  height: 96px;
   border-radius: var(--radius-full);
   background: #D9C8BE;
   border: 1px solid var(--border-strong);
@@ -637,7 +630,7 @@ button {
   font-family: var(--font-serif);
   font-weight: 700;
   font-style: italic;
-  font-size: 2.25rem;
+  font-size: 2rem;
   color: rgba(15, 12, 9, 0.2);
   position: relative;
   z-index: 1;
@@ -652,19 +645,18 @@ button {
   font-family: var(--font-serif);
   font-weight: 400;
   font-style: italic;
-  font-size: clamp(1rem, 1.6vw, 1.375rem);
+  font-size: clamp(0.875rem, 1.6vw, 1.375rem);
   color: var(--ink-3);
-  line-height: 1.3;
+  line-height: 1.4;
   letter-spacing: -0.01em;
   margin-bottom: var(--space-1);
-  white-space: nowrap;
 }
 
 .about__headline-bold {
   display: block;
   font-family: var(--font-body);
   font-weight: 600;
-  font-size: clamp(3rem, 7.5vw, 7rem);
+  font-size: clamp(2.5rem, 7.5vw, 7rem);
   color: var(--ink);
   line-height: 1.0;
   letter-spacing: -0.035em;
@@ -681,14 +673,12 @@ button {
   font-family: var(--font-serif);
   font-weight: 600;
   font-style: italic;
-  font-size: clamp(1rem, 1.8vw, 1.5rem);
+  font-size: clamp(0.9375rem, 1.8vw, 1.5rem);
   color: var(--gold);
   line-height: 1.4;
   letter-spacing: -0.01em;
   margin-top: var(--space-3);
 }
-
-
 
 .about__copy {
   display: flex;
@@ -777,6 +767,8 @@ button {
   50%  { transform: translateY(5px); box-shadow: 0 0 0 7px rgba(232, 67, 31, 0); }
   100% { transform: translateY(0);   box-shadow: 0 0 0 0 rgba(232, 67, 31, 0); }
 }
+
+
 
 .package {
   position: relative;
@@ -977,7 +969,7 @@ button {
   color: var(--ink);
   padding-top: 0.625rem;
   border-top: 2px solid var(--ink);
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.75rem;
 }
 
 .pkg-value-total strong {
@@ -1024,7 +1016,7 @@ button {
 .pkg-price {
   font-family: var(--font-body);
   font-weight: 600;
-  font-size: clamp(4rem, 8vw, 7.5rem);
+  font-size: clamp(3.5rem, 8vw, 7.5rem);
   color: var(--ink);
   letter-spacing: -0.05em;
   line-height: 1;
@@ -1143,6 +1135,8 @@ button {
   font-weight: 600;
 }
 
+
+
 .proof {
   position: relative;
   padding: var(--space-24) 0;
@@ -1182,7 +1176,7 @@ button {
 .proof-title {
   font-family: var(--font-body);
   font-weight: 600;
-  font-size: clamp(1.75rem, 3.5vw, 3rem);
+  font-size: clamp(1.625rem, 3.5vw, 3rem);
   color: var(--ink);
   line-height: 1.05;
   letter-spacing: -0.025em;
@@ -1299,50 +1293,7 @@ button {
   gap: 0.625rem;
 }
 
-.proof-transition {
-  display: flex;
-  align-items: center;
-  gap: var(--space-4);
-  margin-top: var(--space-20);
-}
 
-.proof-transition-line {
-  flex: 1;
-  height: 1px;
-  background: rgba(15, 12, 9, 0.12);
-}
-
-.proof-transition-text {
-  font-family: var(--font-serif);
-  font-style: italic;
-  font-size: 1rem;
-  font-weight: 400;
-  color: var(--ink-2);
-  white-space: nowrap;
-}
-
-.proof-transition-arrow {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 36px;
-  height: 36px;
-  border-radius: var(--radius-full);
-  border: 1px solid var(--coral-border);
-  color: var(--coral);
-  font-size: 1rem;
-  flex-shrink: 0;
-  text-decoration: none;
-  transition: background-color var(--transition), color var(--transition), transform var(--transition);
-  animation: arrowPulse 2.5s ease-in-out infinite;
-}
-
-.proof-transition-arrow:hover {
-  background-color: var(--coral);
-  color: #fff;
-  animation: none;
-  transform: translateY(3px);
-}
 
 .finale {
   position: relative;
@@ -1382,7 +1333,7 @@ button {
 .testi-title {
   font-family: var(--font-body);
   font-weight: 600;
-  font-size: clamp(1.75rem, 3.5vw, 3rem);
+  font-size: clamp(1.625rem, 3.5vw, 3rem);
   color: var(--ink);
   line-height: 1.05;
   letter-spacing: -0.025em;
@@ -1508,12 +1459,11 @@ button {
   color: var(--coral);
 }
 
-/* headline is now the you've read line — Lora italic, quieter */
 .cta-headline {
   font-family: var(--font-serif);
   font-style: italic;
   font-weight: 400;
-  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+  font-size: clamp(1.125rem, 2.5vw, 1.75rem);
   color: var(--ink-2);
   line-height: 1.5;
   letter-spacing: -0.01em;
@@ -1570,6 +1520,8 @@ button {
   color: var(--coral);
   flex-shrink: 0;
 }
+
+
 
 .footer {
   background: #C8BEB4;
@@ -1630,37 +1582,118 @@ button {
   letter-spacing: 0.01em;
 }
 
+
+
+@media (max-width: 1024px) {
+  .pkg-benefits {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pkg-middle {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .pkg-middle::after {
+    display: none;
+  }
+
+  .pkg-left-col {
+    padding-right: 0;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 2rem;
+  }
+
+  .pkg-right-col {
+    padding-left: 0;
+  }
+
+  .pkg-arrow-bridge {
+    display: none;
+  }
+
+  .pkg-price::before {
+    content: 'All of this for';
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: var(--ink-2);
+    letter-spacing: 0;
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+}
+
+
+
 @media (max-width: 768px) {
   .container {
     padding: 0 var(--space-6);
   }
 
+  .nav {
+    height: 60px;
+  }
+
+  .nav__logo-azam {
+    font-size: 1.125rem;
+  }
+
+  .nav__logo-builds {
+    font-size: 1rem;
+  }
+
+  .nav__logo-dot {
+    font-size: 1.5rem;
+  }
+
+  .nav__cta {
+    font-size: 0.75rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .hero {
+    padding-top: 60px;
+  }
+
   .hero__inner {
-    padding: var(--space-12) 0 var(--space-8);
-  }
-
-  .hero__scroll-nav {
-    gap: var(--space-6);
-  }
-}
-
-@media (max-width: 480px) {
-  .nav__cta span:not(.sr-only) {
-    display: none;
+    padding: var(--space-10) 0 var(--space-6);
   }
 
   .hero__eyebrow {
     flex-direction: column;
     gap: var(--space-1);
     margin-bottom: var(--space-8);
+    text-align: center;
   }
 
   .hero__eyebrow-sep {
     display: none;
   }
 
+  .hero__heading-thin {
+    font-size: clamp(1.125rem, 4vw, 1.5rem);
+  }
+
+  .hero__heading-bold {
+    font-size: clamp(2.25rem, 9vw, 3.5rem);
+    line-height: 0.95;
+  }
+
+  .hero__heading-serif {
+    font-size: clamp(0.9375rem, 3vw, 1.25rem);
+  }
+
+  .hero__divider {
+    margin: var(--space-6) 0;
+  }
+
+  .hero__sub {
+    font-size: 0.9375rem;
+    margin-bottom: var(--space-6);
+  }
+
   .hero__guarantee-strip {
-    gap: var(--space-2);
+    gap: var(--space-3);
   }
 
   .hero__guarantee-sep {
@@ -1670,9 +1703,295 @@ button {
   .btn-primary--large {
     width: 100%;
     justify-content: center;
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
+  }
+
+  .hero__scarcity {
+    font-size: 0.75rem;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .hero__scroll-nav {
-    gap: var(--space-4);
+    gap: var(--space-8);
+    padding: var(--space-6) 0;
+  }
+
+  .hero__scroll-label {
+    font-size: 0.6875rem;
+  }
+
+  .about {
+    padding: var(--space-16) 0;
+  }
+
+  .about__top {
+    margin-bottom: var(--space-8);
+  }
+
+  .about__photo {
+    width: 72px;
+    height: 72px;
+  }
+
+  .about__photo-initial {
+    font-size: 1.5rem;
+  }
+
+  .about__headline {
+    margin-bottom: var(--space-8);
+  }
+
+  .about__headline-thin {
+    white-space: normal;
+    font-size: clamp(0.8125rem, 2.5vw, 1.125rem);
+  }
+
+  .about__headline-bold {
+    font-size: clamp(2.25rem, 9vw, 4rem);
+  }
+
+  .about__headline-serif {
+    font-size: clamp(0.875rem, 2.5vw, 1.125rem);
+  }
+
+  .about__copy {
+    max-width: 100%;
+    gap: var(--space-5);
+  }
+
+  .about__para {
+    font-size: 0.9375rem;
+  }
+
+  .about__para--lead {
+    font-size: 1rem;
+  }
+
+  .about__pull {
+    font-size: 0.9375rem;
+    padding: var(--space-3) var(--space-4);
+  }
+
+  .about__transition-text {
+    font-size: 0.9375rem;
+  }
+
+  .about__transition {
+    margin-top: var(--space-12);
+  }
+
+  .package {
+    padding: var(--space-16) 0;
+  }
+
+  .pkg-title {
+    font-size: clamp(1.75rem, 6vw, 2.5rem);
+  }
+
+  .pkg-benefits {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.375rem;
+  }
+
+  .pkg-benefit {
+    padding: 1rem;
+  }
+
+  .pkg-benefit-title {
+    font-size: 0.8125rem;
+  }
+
+  .pkg-benefit-desc {
+    font-size: 0.75rem;
+  }
+
+  .pkg-price {
+    font-size: clamp(3rem, 12vw, 5rem);
+  }
+
+  .pkg-cta {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .pkg-trust {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .pkg-anchor-text {
+    font-size: 0.8125rem;
+  }
+
+  .proof {
+    padding: var(--space-16) 0;
+  }
+
+  .proof-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .proof-title {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+    margin-bottom: 2rem;
+  }
+
+  .finale {
+    padding: var(--space-16) 0;
+  }
+
+  .testi-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  .testi-title {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+    margin-bottom: 2rem;
+  }
+
+  .testi-card {
+    padding: 1.5rem;
+  }
+
+  .cta-headline {
+    font-size: clamp(1rem, 4vw, 1.375rem);
+  }
+
+  .cta-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .cta-trust {
+    gap: 1rem;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.75rem;
+  }
+}
+
+
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 var(--space-5);
+  }
+
+  .nav__cta .nav__cta-text {
+    display: none;
+  }
+
+  .hero__inner {
+    padding: var(--space-8) 0 var(--space-4);
+  }
+
+  .hero__heading-bold {
+    font-size: clamp(2rem, 10vw, 2.75rem);
+  }
+
+  .hero__guarantee-strip {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-2);
+  }
+
+  .hero__guarantee-sep {
+    display: none;
+  }
+
+  .hero__scroll-nav {
+    gap: var(--space-5);
+  }
+
+  .hero__scroll-num {
+    font-size: 0.875rem;
+  }
+
+  .hero__scroll-label {
+    font-size: 0.625rem;
+    letter-spacing: 0.08em;
+  }
+
+  .hero__scroll-divider {
+    height: 20px;
+  }
+
+  .about__headline-bold {
+    font-size: clamp(2rem, 10vw, 3rem);
+  }
+
+  .pkg-benefits {
+    grid-template-columns: 1fr;
+  }
+
+  .pkg-benefit {
+    padding: 0.875rem;
+  }
+
+  .pkg-urgency {
+    font-size: 0.625rem;
+    padding: 0.25rem 0.625rem;
+  }
+
+  .pkg-trust {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .proof-card {
+    border-radius: 0.75rem;
+  }
+
+  .testi-card {
+    padding: 1.25rem;
+  }
+
+  .testi-divider {
+    margin-bottom: 2.5rem;
+  }
+
+  .cta-trust {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+}
+
+
+
+@media (max-width: 360px) {
+  .container {
+    padding: 0 var(--space-4);
+  }
+
+  .hero__heading-bold {
+    font-size: clamp(1.875rem, 11vw, 2.5rem);
+    letter-spacing: -0.03em;
+  }
+
+  .hero__heading-thin {
+    font-size: 1rem;
+  }
+
+  .hero__heading-serif {
+    font-size: 0.875rem;
+  }
+
+  .about__headline-bold {
+    font-size: clamp(1.875rem, 11vw, 2.5rem);
+  }
+
+  .pkg-price {
+    font-size: clamp(2.5rem, 12vw, 3.5rem);
   }
 }
