@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1200">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,600;1,400&family=DM+Sans:wght@400;600&display=swap');
+
+  body {
+    width: 1200px;
+    height: 630px;
+    background: #E2D9CE;
+    font-family: 'DM Sans', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .bg-dots {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle, rgba(15,12,9,0.13) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+
+  .bg-glow-coral {
+    position: absolute;
+    top: -120px;
+    left: -120px;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(232,67,31,0.1) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+
+  .bg-glow-gold {
+    position: absolute;
+    bottom: -120px;
+    right: -120px;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(184,114,26,0.15) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+
+  .content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 100px 0 100px;
+    max-width: 900px;
+    width: 100%;
+  }
+
+  .eyebrow {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #E8431F;
+    margin-bottom: 24px;
+  }
+
+  .headline-thin {
+    font-family: 'Lora', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 32px;
+    color: #4A3F36;
+    line-height: 1.2;
+    margin-bottom: 8px;
+  }
+
+  .headline-bold {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 600;
+    font-size: 88px;
+    color: #0F0C09;
+    line-height: 0.92;
+    letter-spacing: -0.04em;
+    margin-bottom: 8px;
+  }
+
+  .headline-accent {
+    color: #E8431F;
+  }
+
+  .headline-serif {
+    font-family: 'Lora', serif;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 28px;
+    color: #B8721A;
+    line-height: 1.2;
+    margin-bottom: 48px;
+  }
+
+  .divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 40px;
+    width: 320px;
+  }
+
+  .divider-line {
+    flex: 1;
+    height: 1px;
+    background: rgba(15,12,9,0.15);
+  }
+
+  .divider-diamond {
+    width: 5px;
+    height: 5px;
+    background: #E8431F;
+    transform: rotate(45deg);
+    opacity: 0.6;
+  }
+
+  .logo {
+    display: flex;
+    align-items: baseline;
+    gap: 0;
+  }
+
+  .logo-azam {
+    font-family: 'Lora', serif;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 22px;
+    color: #4A3F36;
+  }
+
+  .logo-slash {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    color: #8A7B70;
+    margin: 0 5px;
+  }
+
+  .logo-builds {
+    font-family: 'Lora', serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 20px;
+    color: #4A3F36;
+  }
+
+  .logo-dot {
+    font-family: 'Lora', serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 28px;
+    color: #E8431F;
+    line-height: 0.75;
+    margin-left: 1px;
+  }
+
+  .url {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    color: #8A7B70;
+    margin-top: 6px;
+    letter-spacing: 0.04em;
+  }
+</style>
+</head>
+<body>
+  <div class="bg-dots"></div>
+  <div class="bg-glow-coral"></div>
+  <div class="bg-glow-gold"></div>
+
+  <div class="content">
+    <p class="eyebrow">
+      <span style="color:#E8431F;">KL Makeup Artists &amp; Photographers</span>
+      <span style="color:#8A7B70; margin: 0 8px;">·</span>
+      <span style="color:#4A3F36;">This one's for you</span>
+    </p>
+    <p class="headline-thin">your craft deserves</p>
+    <p class="headline-bold">a website that<br><span class="headline-accent">gets you chosen.</span></p>
+    <p class="headline-serif">not just one that exists.</p>
+    <div class="divider">
+      <span class="divider-line"></span>
+      <span class="divider-diamond"></span>
+      <span class="divider-line"></span>
+    </div>
+    <div class="logo">
+      <span class="logo-azam">Azam</span>
+      <span class="logo-slash">/</span>
+      <span class="logo-builds">Builds</span>
+      <span class="logo-dot">.</span>
+    </div>
+    <p class="url">azam-builds.netlify.app</p>
+  </div>
+</body>
+</html>
