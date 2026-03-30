@@ -3,6 +3,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (!fadeEls.length) return;
 
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (prefersReduced) {
+    fadeEls.forEach(el => el.classList.add('visible'));
+    return;
+  }
+
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -12,7 +19,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
     },
-    { threshold: 0.12 }
+    {
+      threshold: 0.12,
+      rootMargin: '0px 0px -40px 0px'
+    }
   );
 
   fadeEls.forEach((el) => observer.observe(el));

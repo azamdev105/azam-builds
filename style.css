@@ -222,7 +222,7 @@ button {
 }
 
 .hero__bg-dots {
-  position: fixed;
+  position: absolute;
   inset: 0;
   background-image: radial-gradient(circle, rgba(15, 12, 9, 0.13) 1px, transparent 1px);
   background-size: 28px 28px;
@@ -231,7 +231,7 @@ button {
 }
 
 .hero__bg-vignette {
-  position: fixed;
+  position: absolute;
   inset: 0;
   background: radial-gradient(ellipse 80% 75% at 50% 45%, transparent 38%, rgba(210, 200, 188, 0.65) 100%);
   pointer-events: none;
@@ -498,10 +498,6 @@ button {
   transition: opacity var(--transition);
 }
 
-.hero__scroll-item:hover {
-  opacity: 0.6;
-}
-
 /* FIX 4: remove blue flash on arrow icons */
 .hero__scroll-item,
 .hero__scroll-item:focus,
@@ -543,15 +539,15 @@ button {
   display: block;
   width: 1px;
   height: 20px;
-  background: linear-gradient(to bottom, transparent, var(--ink-3));
+  background: linear-gradient(to bottom, transparent, var(--ink-2));
 }
 
 .hero__scroll-arrow-tip {
   display: block;
   width: 6px;
   height: 6px;
-  border-right: 1px solid var(--ink-3);
-  border-bottom: 1px solid var(--ink-3);
+  border-right: 1px solid var(--ink-2);
+  border-bottom: 1px solid var(--ink-2);
   transform: rotate(45deg);
   margin-top: -5px;
 }
@@ -570,15 +566,6 @@ button {
     #EDDDD6;
 }
 
-.about::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: radial-gradient(circle, rgba(15, 12, 9, 0.11) 1px, transparent 1px);
-  background-size: 28px 28px;
-  pointer-events: none;
-  z-index: 0;
-}
 
 .about .container {
   position: relative;
@@ -791,15 +778,6 @@ button {
     #E8E0D5;
 }
 
-.package::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: radial-gradient(circle, rgba(15, 12, 9, 0.1) 1px, transparent 1px);
-  background-size: 28px 28px;
-  pointer-events: none;
-  z-index: 0;
-}
 
 .package .container {
   position: relative;
@@ -838,15 +816,8 @@ button {
 
 .pkg-rule-thick {
   width: 100%;
-  height: 3px;
-  background: var(--ink);
-}
-
-.pkg-rule-thin {
-  width: 100%;
   height: 1px;
   background: var(--ink);
-  margin-top: 0.25rem;
 }
 
 .pkg-bottom-label {
@@ -870,7 +841,7 @@ button {
 
 .pkg-benefit {
   padding: 1.25rem;
-  background: rgba(15, 12, 9, 0.035);
+  background: #F5EDE5;
   border-radius: 0.5rem;
 }
 
@@ -1023,6 +994,14 @@ button {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+}
+
+.pkg-price-prefix {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: var(--ink-2);
+  margin-bottom: 0.25rem;
 }
 
 .pkg-price {
@@ -1312,15 +1291,6 @@ button {
     #E2D9CE;
 }
 
-.finale::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: radial-gradient(circle, rgba(15, 12, 9, 0.11) 1px, transparent 1px);
-  background-size: 28px 28px;
-  pointer-events: none;
-  z-index: 0;
-}
 
 .finale .container {
   position: relative;
@@ -1616,15 +1586,6 @@ button {
     display: none;
   }
 
-  .pkg-price::before {
-    content: 'All of this for';
-    font-size: 0.875rem;
-    font-weight: 400;
-    color: var(--ink-2);
-    letter-spacing: 0;
-    display: block;
-    margin-bottom: 0.25rem;
-  }
 }
 
 @media (max-width: 768px) {
